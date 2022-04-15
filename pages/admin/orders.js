@@ -18,7 +18,7 @@ export const getServerSideProps = async (ctx) => {
       },
     };
 
-  const res = await axios.get("http://localhost:3000/api/orders");
+  const res = await axios.get(`${process.env.NODE_ENV === "development" ? "http" : "https"}://${ctx.req.headers.host}/api/orders`);
 
   return {
     props: {

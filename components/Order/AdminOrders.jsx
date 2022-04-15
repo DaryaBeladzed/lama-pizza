@@ -9,7 +9,7 @@ const AdminOrders = (props) => {
   const nextStageHandler = async (order) => {
     try {
       const res = await axios.put(
-        `http://localhost:3000/api/orders/${order._id}`,
+        `${window.location.protocol}//${window.location.host}/api/orders/${order._id}`,
         { status: ++order.status }
       );
       const ind = orders.findIndex((item) => item._id === order._id);

@@ -6,9 +6,9 @@ const ProductPage = ({product}) => {
   return <Product product={product} />;
 };
 
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async ({ params, req }) => {
   const res = await axios.get(
-    `http://localhost:3000/api/products/${params.product_id}`
+    `${process.env.NODE_ENV === "development" ? "http" : "https"}://${req.headers.host}/api/products/${params.product_id}`
   );
   return {
     props: {

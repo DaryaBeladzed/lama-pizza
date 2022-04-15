@@ -11,7 +11,7 @@ const AdminProducts = (props) => {
 
   const deleteProductHandler = async (id) => {
     try {
-      const res = axios.delete(`http://localhost:3000/api/products/${id}`);
+      const res = axios.delete(`${window.location.protocol}//${window.location.host}/api/products/${id}`);
       setProducts((prevState) => prevState.filter((item) => item._id !== id));
     } catch (e) {
       console.log(e);

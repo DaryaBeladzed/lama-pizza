@@ -18,8 +18,11 @@ const HomePage = ({ products }) => {
   );
 };
 
-export const getServerSideProps = async () => {
-  const res = await axios.get("http://localhost:3000/api/products");
+export const getServerSideProps = async (ctx) => {
+  // console.log(ctx)
+  // console.log(ctx.req.headers);
+  // console.log(process.env.NODE_ENV)
+  const res = await axios.get(`${process.env.NODE_ENV === "development" ? "http" : "https"}://${ctx.req.headers.host}/api/products`);
 
   return {
     props: {

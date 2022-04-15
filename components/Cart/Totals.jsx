@@ -27,7 +27,7 @@ const Totals = (props) => {
     console.log(cartProducts);
     dispatch(cartActions.clear());
     try {
-      const res = await axios.post(`http://localhost:3000/api/orders`, {
+      const res = await axios.post(`${window.location.protocol}//${window.location.host}/api/orders`, {
         ...data,
         products: cartProducts,
       });

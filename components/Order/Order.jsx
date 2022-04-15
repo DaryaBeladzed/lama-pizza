@@ -30,7 +30,7 @@ const Order = (props) => {
   const refreshHandler = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/orders/${props.order._id}`
+        `${window.location.protocol}//${window.location.host}/api/orders/${props.order._id}`
       );
       setOrder(res.data);
     } catch (e) {

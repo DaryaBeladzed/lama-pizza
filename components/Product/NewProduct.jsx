@@ -41,9 +41,9 @@ const NewProduct = ({ onClose, refresh, isNew, product }) => {
       };
 
       const res = isNew
-        ? await axios.post("http://localhost:3000/api/products", newProduct)
+        ? await axios.post(`${window.location.protocol}//${window.location.host}/api/products`, newProduct)
         : await axios.put(
-            `http://localhost:3000/api/products/${product._id}`,
+            `${window.location.protocol}//${window.location.host}/api/products/${product._id}`,
             newProduct
           );
 

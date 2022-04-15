@@ -5,9 +5,9 @@ const OrderPage = ({ order }) => {
   return <Order order={order} />;
 };
 
-export const getServerSideProps = async ({ params }) => {
+export const getServerSideProps = async ({ params, req }) => {
   const res = await axios.get(
-    `http://localhost:3000/api/orders/${params.order_id}`
+    `${process.env.NODE_ENV === "development" ? "http" : "https"}://${req.headers.host}/api/orders/${params.order_id}`
   );
   return {
     props: {
