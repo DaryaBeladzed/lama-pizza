@@ -4,10 +4,16 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 https://lama-pizza.herokuapp.com/
 
+https://lama-pizza-seven.vercel.app/
+
 /product/[id]
+
 /order/[id]
+
 /cart
+
 /admin/orders
+
 /admin/products
 
 ## Getting Started
