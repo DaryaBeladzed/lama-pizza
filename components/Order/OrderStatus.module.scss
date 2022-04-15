@@ -1,0 +1,47 @@
+.status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity .2s linear;
+  margin-bottom: 10px;
+
+  div {
+    position: relative;
+
+    &:first-child {
+      width: 30px;
+      height: 30px;
+    }
+
+    &:last-child {
+      display: none;
+      width: 20px;
+      height: 20px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.undone {
+  opacity: 0.3;
+}
+
+.done {
+  div:last-child {
+    display: block;
+  }
+}
+
+.inProgress {
+    animation: in_progress 1s linear infinite;
+}
+
+@keyframes in_progress {
+    0% {
+        opacity: .2;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

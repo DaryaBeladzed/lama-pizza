@@ -1,0 +1,120 @@
+@import "/styles/variables.scss";
+
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  height: 100px;
+  width: 100%;
+  top: 0;
+
+  background-color: $mainColor;
+  color: #fff;
+
+  z-index: 999;
+
+  .item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    .telephone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .info {
+      p {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+
+      span {
+        font-weight: 700;
+        font-size: 19px;
+      }
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      list-style: none;
+
+      li {
+        cursor: pointer;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .item:nth-child(2) {
+    flex: 3;
+  }
+
+  .item:last-child {
+    justify-content: flex-end;
+    position: relative;
+
+    img {
+      cursor: pointer;
+    }
+
+    .counter {
+      cursor: pointer;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20px;
+      height: 20px;
+      top: 13px;
+      right: -10px;
+      padding: 2px;
+
+      background-color: #fff;
+      border-radius: 50%;
+
+      color: $mainColor;
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .animateCounter {
+      animation: animateCounter 0.3s ease-out;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .item:nth-child(2) {
+      display: none;
+    }
+
+    .item:first-child {
+      flex: 2;
+    }
+  }
+
+  @keyframes animateCounter {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.3);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+  }
+}

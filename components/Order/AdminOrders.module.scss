@@ -1,0 +1,32 @@
+@import "/styles/variables.scss";
+
+.orders {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding: 50px 70px;
+
+  h2 {
+    margin-bottom: 30px;
+  }
+  & > div {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+}
+
+// @keyframes heightAnim {
+//   0% {
+//     height: 0;
+//   }
+
+//   50% {
+//     height: 50px;
+//   }
+
+//   100% {
+//     height: max-content;
+//   }
+// }

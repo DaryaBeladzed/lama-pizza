@@ -1,0 +1,56 @@
+@import "/styles/variables.scss";
+
+.overlay {
+  width: 100%;
+  height: calc(100vh - 100px);
+  top: 100px;
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 997;
+
+  .modal {
+    position: absolute;
+    width: 50%;
+    max-width: 500px;
+    padding: 50px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 998;
+
+    p {
+      font-size: 23px;
+      text-align: center;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-bottom: 10px;
+      }
+
+      input {
+        margin-bottom: 20px;
+        padding: 7px;
+      }
+
+      button {
+        padding: 10px;
+        width: 30%;
+        margin: 0 auto;
+        margin-top: 10px;
+        border: none;
+        background-color: $thirdColor;
+        color: #fff;
+        border-radius: 5px;
+      }
+    }
+  }
+}

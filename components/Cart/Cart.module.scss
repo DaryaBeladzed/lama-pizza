@@ -1,0 +1,25 @@
+.cart {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding: 50px 70px;
+
+  .items {
+    flex: 2;
+    margin-right: 20px;
+    padding-right: 10px;
+    max-height: 100%;
+    overflow-y: auto;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .items {
+      margin-top: 10px;
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+}

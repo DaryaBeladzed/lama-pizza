@@ -1,0 +1,55 @@
+.order {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+  padding: 50px 70px;
+
+  .details {
+    flex: 2;
+
+    .info {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      b {
+        margin-right: 10px;
+      }
+
+      div:last-child {
+        margin-right: 28px;
+        margin-top: 5px;
+
+        svg {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .progress {
+      width: 80%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .details {
+      width: 100%;
+      text-align: center;
+      margin-top: 20px;
+
+      .progress {
+        width: 100%;
+      }
+    }
+  }
+}

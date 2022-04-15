@@ -1,0 +1,149 @@
+@import "/styles/variables.scss";
+
+.product {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+
+  .left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .img {
+      width: 80%;
+      height: 80%;
+      position: relative;
+    }
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+
+    .info {
+      span {
+        display: inline-block;
+        color: $mainColor;
+        border-bottom: 1px solid $mainColor;
+        margin: 15px 0;
+
+        font-size: 24px;
+        font-weight: 400;
+      }
+
+      p {
+        color: $secondTextColor;
+        width: 90%;
+      }
+    }
+
+    .sizes {
+      width: 40%;
+      margin-top: 25px;
+
+      h4 {
+        margin-bottom: 15px;
+      }
+      div {
+        display: flex;
+        justify-content: space-between;
+
+        div {
+          position: relative;
+          cursor: pointer;
+
+          p {
+            position: absolute;
+            top: -5px;
+            right: -14px;
+            padding: 0 5px;
+            border-radius: 10px;
+
+            font-size: 12px;
+            color: #fff;
+            background-color: $thirdColor;
+          }
+        }
+
+        .small {
+          width: 30px;
+          height: 30px;
+        }
+
+        .medium {
+          width: 40px;
+          height: 40px;
+        }
+
+        .large {
+          width: 50px;
+          height: 50px;
+        }
+      }
+
+      @media (max-width: 1024px) {
+        width: 80%;
+      }
+    }
+
+    .ingridients {
+      width: 100%;
+      margin-top: 25px;
+
+      h4 {
+        margin-bottom: 15px;
+      }
+      div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .option {
+          margin-right: 20px;
+          margin-bottom: 7px; 
+
+          .checkbox {
+            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+          }
+          
+        }
+      }
+    }
+
+    .cart {
+      display: flex;
+      margin-top: 40px;
+      margin-left: 1px;
+
+      input {
+        width: 40px;
+        padding: 2px;
+        margin-right: 20px;
+        outline: none;
+      }
+
+      button {
+        padding: 7px 14px;
+
+        border: none;
+        border-radius: 4px;
+        background-color: $mainColor;
+        color: #fff;
+      }
+    }
+  }
+}

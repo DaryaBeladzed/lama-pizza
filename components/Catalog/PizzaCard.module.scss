@@ -1,0 +1,36 @@
+@import "/styles/variables.scss";
+
+.pizzaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  div {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    @media (max-width: 1475px) {
+      width: 200px;
+      height: 200px;
+    }
+  }
+
+  h3 {
+    color: $mainColor;
+  }
+
+  span {
+    color: $secondTextColor;
+    font-weight: 700;
+    margin: 15px auto;
+  }
+
+  p {
+    color: $secondTextColor;
+    text-align: center;
+  }
+}

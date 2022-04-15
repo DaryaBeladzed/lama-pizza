@@ -1,0 +1,89 @@
+@import "/styles/variables.scss";
+
+.overlay {
+  width: 100%;
+  height: calc(100vh - 100px);
+  top: 100px;
+  left: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 997;
+
+  .modal {
+    position: absolute;
+    width: 50%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #fff;
+    z-index: 998;
+
+    form {
+      display: flex;
+      flex-direction: column;
+
+      label {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      textarea {
+        max-width: 440px;
+      }
+
+      input {
+        border: none;
+        border-bottom: 1px solid $secondTextColor;
+      }
+
+      .fileInp {
+        border: none;
+      }
+
+      .prices,
+      .extras {
+        display: flex;
+        justify-content: space-between;
+        input {
+          width: 25%;
+        }
+
+        button {
+          padding: 1px 6px;
+        }
+      }
+
+      .extraItems {
+        display: flex;
+        flex-wrap: wrap;
+
+        .extra {
+          margin-top: 10px;
+          margin-right: 10px;
+          padding: 3px;
+          border: 1px solid $mainColor;
+          border-radius: 5px;
+          position: relative;
+          color: $mainColor;
+          cursor: pointer;
+        }
+      }
+
+      .submitBtn {
+        padding: 5px;
+        margin-top: 20px;
+        width: 25%;
+        align-self: flex-end;
+        background-color: $thirdColor;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}
